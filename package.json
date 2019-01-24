@@ -1,0 +1,25 @@
+{
+  "name": "fade-text",
+  "version": "0.1.0",
+  "description": "Simple letter-by-letter fading text effect",
+  "main": "fade-text.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasofalcon/fade-text.git"
+  },
+  "keywords": [
+    "animation",
+    "fading",
+    "text",
+    "fade"
+  ],
+  "author": "jasofalcon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasofalcon/fade-text/issues"
+  },
+  "homepage": "https://github.com/jasofalcon/fade-text#readme"
+}
