@@ -1,6 +1,6 @@
 {
   "name": "fade-text",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple letter-by-letter fading text effect",
   "main": "fade-text.js",
   "scripts": {
