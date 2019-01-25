@@ -1,6 +1,6 @@
 {
   "name": "fade-text",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple letter-by-letter fading text effect",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,5 +37,7 @@
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.4"
   },
-  "files": ["lib/**/*"]
+  "files": [
+    "lib/**/*"
+  ]
 }
