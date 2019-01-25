@@ -20,5 +20,6 @@ npm i fade-text (or yarn)
 ```js
 import FadeText from 'fade-text';
 
-FadeText.applyAnimation('my-text');
+const fadeText = new FadeText();
+fadeText.applyAnimation('my-text');
 ```
