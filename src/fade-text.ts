@@ -1,15 +1,76 @@
-const FadeText = (() => {
-  return { applyAnimation };
+// const FadeText = (() => {
+//   return { applyAnimation };
 
-  function applyAnimation(elementId: string) {
+//   function applyAnimation(elementId: string) {
+//     const element = document.getElementById(elementId) as HTMLElement;
+
+//     element.innerHTML = divideLettersToSpans(element);
+
+//     fade();
+//   }
+
+//   function divideLettersToSpans(element: HTMLElement) {
+//     const textNode = element.childNodes[0];
+
+//     if (textNode.nodeValue === null) {
+//       throw new Error('Element not found');
+//     }
+
+//     return textNode.nodeValue
+//       .split('')
+//       .map((l, i) => {
+//         if (l === ' ') {
+//           l = '&nbsp;';
+//         }
+//         return `<span class="anim-${i}">${l}</span>`;
+//       })
+//       .join('');
+//   }
+
+//   function fade() {
+//     const spans = document.querySelectorAll('span[class^=anim]');
+
+//     const indexes: number[] = [];
+//     for (let i = 0; i < spans.length; i++) {
+//       indexes[i] = i;
+//     }
+
+//     const helperArr = shuffle(indexes);
+
+//     let time = 0;
+
+//     while (helperArr.length > 0) {
+//       const index = helperArr[0];
+//       (spans[index] as HTMLElement).style.transition = 'all .5s';
+//       time += 250;
+//       setTimeout(() => {
+//         (spans[index] as HTMLElement).style.opacity = '0';
+//       }, time);
+//       helperArr.shift();
+//     }
+//   }
+
+//   function shuffle<E>(a: E[]) {
+//     for (let i = a.length - 1; i > 0; i--) {
+//       const j = Math.floor(Math.random() * (i + 1));
+//       [a[i], a[j]] = [a[j], a[i]];
+//     }
+//     return a;
+//   }
+// })();
+
+// export default FadeText;
+
+class FadeText {
+  applyAnimation(elementId: string) {
     const element = document.getElementById(elementId) as HTMLElement;
 
-    element.innerHTML = divideLettersToSpans(element);
+    element.innerHTML = this.divideLettersToSpans(element);
 
-    fade();
+    this.fade();
   }
 
-  function divideLettersToSpans(element: HTMLElement) {
+  divideLettersToSpans(element: HTMLElement) {
     const textNode = element.childNodes[0];
 
     if (textNode.nodeValue === null) {
@@ -27,7 +88,7 @@ const FadeText = (() => {
       .join('');
   }
 
-  function fade() {
+  fade() {
     const spans = document.querySelectorAll('span[class^=anim]');
 
     const indexes: number[] = [];
@@ -35,7 +96,7 @@ const FadeText = (() => {
       indexes[i] = i;
     }
 
-    const helperArr = shuffle(indexes);
+    const helperArr = this.shuffle(indexes);
 
     let time = 0;
 
@@ -50,13 +111,13 @@ const FadeText = (() => {
     }
   }
 
-  function shuffle<E>(a: E[]) {
+  shuffle<E>(a: E[]) {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
   }
-})();
+}
 
 export default FadeText;

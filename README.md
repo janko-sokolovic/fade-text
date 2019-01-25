@@ -1,6 +1,7 @@
 # Fade text
 
 Animation of text fading letter-by-letter
+Demo: [here](https://jasofalcon.github.io/matrix/)
 
 ## Install
 
